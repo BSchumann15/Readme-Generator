@@ -22,7 +22,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please provide a description of the project',
+        message: 'Please provide a description of the project?',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -80,7 +80,7 @@ const questions = [
     {
         type: 'input',
         name: 'testing',
-        message: 'Please provide how you willtest this project?',
+        message: 'Please provide how you will test this project?',
         validate: testingInput => {
             if (testingInput) {
                 return true;
