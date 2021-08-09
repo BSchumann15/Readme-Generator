@@ -8,7 +8,7 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        message: 'What is the title of the project? (Required)',
+        message: 'Please provide the title of the project? (Required)',
         validate: titleInput => {
             if (titleInput) {
                 return true;
@@ -22,7 +22,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Provide a description of the project',
+        message: 'Please provide a description of the project',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -32,11 +32,13 @@ const questions = [
             }
         }
     },
+
+   
     // Installation Instructions
     {
         type: 'input',
         name: 'installation',
-        message: 'How do you install your project?',
+        message: 'Please provide how you install your project?',
         validate: installationInput => {
             if (installationInput) {
                 return true;
@@ -50,7 +52,7 @@ const questions = [
     {
         type: 'input',
         name: 'usage',
-        message: 'How do you use this project?',
+        message: 'Please provide how you will use this project?',
         validate: usageInput => {
             if (usageInput) {
                 return true;
@@ -64,7 +66,7 @@ const questions = [
     {
         type: 'input',
         name: 'contribution',
-        message: 'How should people contribute to this project?',
+        message: 'Please provide how people contribute to this project?',
         validate: contributionInput => {
             if (contributionInput) {
                 return true;
@@ -78,7 +80,7 @@ const questions = [
     {
         type: 'input',
         name: 'testing',
-        message: 'How do you test this project?',
+        message: 'Please provide how you willtest this project?',
         validate: testingInput => {
             if (testingInput) {
                 return true;
@@ -92,7 +94,7 @@ const questions = [
     {
         type: 'checkbox',
         name: 'licensing',
-        message: 'Choose a license for your project',
+        message: 'Please choose a license for your project',
         choices: ['Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'Common-Development-and Distribution', 'None'],
         validate: licensingInput => {
             if (licensingInput) {
@@ -107,7 +109,7 @@ const questions = [
     {
         type: 'input',
         name: 'github',
-        message: 'Enter your GitHub Username',
+        message: 'Please provide your GitHub Username',
         validate: githubInput => {
             if (githubInput) {
                 return true;
