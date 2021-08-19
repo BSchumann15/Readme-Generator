@@ -2,9 +2,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./src/generateMarkdown.js')
 
-// Array of questions to ask the user
+//Questions that will be asked to the user
 const questions = [
-    // Project name
+    // The Projects name
     {
         type: 'input',
         name: 'title',
@@ -18,7 +18,7 @@ const questions = [
             }
         }
     },
-    // Description of project
+    // To give a description of the project
     {
         type: 'input',
         name: 'description',
@@ -34,7 +34,7 @@ const questions = [
     },
 
    
-    // Installation Instructions
+    // To give installation instructions 
     {
         type: 'input',
         name: 'installation',
@@ -48,7 +48,7 @@ const questions = [
             }
         }
     },
-    // Usage Information
+    // to give usage information
     {
         type: 'input',
         name: 'usage',
@@ -76,7 +76,7 @@ const questions = [
             }
         }
     },
-    // Test Instructions 
+    // to give instructions to test
     {
         type: 'input',
         name: 'testing',
@@ -105,7 +105,7 @@ const questions = [
             }
         }
     },
-    // Github Username
+    // Provide a Github Username
     {
         type: 'input',
         name: 'github',
@@ -119,7 +119,7 @@ const questions = [
             }
         }
     },
-    // Email Address
+    // Provide an Email Address
     {
         type: 'input',
         name: 'email',
@@ -127,7 +127,7 @@ const questions = [
     },
 ];
 
-// Function to write README file
+// Function that writes the README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) => {
         if (err)
@@ -136,7 +136,7 @@ function writeToFile(fileName, data) {
     });
 };
 
-// Function to initialize app
+// Function that initializes the app
 function init() {
     inquirer.prompt(questions)
     .then(function (userInput) {
@@ -145,5 +145,5 @@ function init() {
     });
 };
 
-// Function call to initialize app
+// Function call that initializes app
 init();

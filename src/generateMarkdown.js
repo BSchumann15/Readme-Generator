@@ -1,4 +1,4 @@
-// function to generate markdown for README
+// function that generates the markdown for Readme file
 function generateMarkdown(data) {
   return `# ${data.title}
   ## Licensing:
